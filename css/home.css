@@ -7,3 +7,20 @@
     width: 100%;
     height: 100%;
 }
+.hero_video iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1023.98px) {
+    .hero {
+        width: 100%;
+        height: auto;
+        margin-top: 60px;
+    }
+    .hero_video iframe {
+        aspect-ratio: 16/9;
+        width: 100%;
+        height: auto;
+    }
+}
