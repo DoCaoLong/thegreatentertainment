@@ -1,0 +1,14 @@
+# Tệp robots.txt cho Thegreatentertainment
+# Cấm tất cả các bot truy cập vào thư mục admin và các trang không cần thiết
+
+User-agent: *
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Cho phép tất cả các bot truy cập các trang còn lại
+Allow: /
+
+# Khai báo sitemap để các bot tìm thấy dễ dàng
+Sitemap: https://www.thegreatentertainment.com/sitemap.xml
