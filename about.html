@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Thegreatentertainment | Trang chủ</title>
+        <title>Thegreatentertainment | Về chúng tôi</title>
         <!-- SEO Meta Tags -->
         <meta
             name="description"
@@ -18,7 +18,10 @@
         <link rel="canonical" href="https://www.thegreatentertainment.com/" />
 
         <!-- Social Media Meta Tags -->
-        <meta property="og:title" content="Thegreatentertainment | Trang chủ" />
+        <meta
+            property="og:title"
+            content="Thegreatentertainment | Về chúng tôi"
+        />
         <meta
             property="og:description"
             content="Thegreatentertainment - Trải nghiệm giải trí hàng đầu với các nội dung phong phú và đa dạng."
@@ -36,7 +39,7 @@
         <meta name="twitter:card" content="summary_large_image" />
         <meta
             name="twitter:title"
-            content="Thegreatentertainment | Trang chủ"
+            content="Thegreatentertainment | Về chúng tôi"
         />
         <meta
             name="twitter:description"
@@ -70,7 +73,7 @@
         <!-- CSS Links -->
         <link rel="stylesheet" href="./css/global.css?v=1.7" />
         <link rel="stylesheet" href="./css/style.css?v=1.7" />
-        <link rel="stylesheet" href="./css/home.css?v=1.2" />
+        <link rel="stylesheet" href="./css/about.css" />
 
         <link
             href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -91,7 +94,6 @@
             gtag("config", "G-27X2KP73M8");
         </script>
     </head>
-
     <body>
         <header id="header">
             <div class="container">
@@ -115,24 +117,61 @@
                 </div>
             </div>
         </header>
-
-        <main>
-            <div class="hero container">
-                <div class="hero_video">
-                    <iframe
-                        width="100%"
-                        height="100%"
-                        src="https://www.youtube.com/embed/Fdkx3XNZEUM?autoplay=1"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                    ></iframe>
+        <main class="about-page container">
+            <div class="ceo">
+                <div class="ceo-img">
+                    <img
+                        src="https://images.pexels.com/photos/18685804/pexels-photo-18685804/free-photo-of-may-nh-nhan-hi-u-t-ng-t-l-i-th-i.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt=""
+                    />
+                </div>
+                <div class="team-item-content">
+                    <h2 class="team-name">Nguyễn Sơn Quyền</h2>
+                    <p>CEO</p>
+                </div>
+            </div>
+            <div class="team-list">
+                <div class="team-item">
+                    <div class="team-item-img">
+                        <img
+                            src="https://images.pexels.com/photos/18685804/pexels-photo-18685804/free-photo-of-may-nh-nhan-hi-u-t-ng-t-l-i-th-i.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt=""
+                        />
+                    </div>
+                    <div class="team-item-content">
+                        <h2 class="team-name">Phạm Thanh Bình</h2>
+                        <p>0987654321</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="team-item-img">
+                        <img
+                            src="https://images.pexels.com/photos/18685804/pexels-photo-18685804/free-photo-of-may-nh-nhan-hi-u-t-ng-t-l-i-th-i.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt=""
+                        />
+                    </div>
+                    <div class="team-item-content">
+                        <h2 class="team-name">Trần Trung Hiếu</h2>
+                        <p>0987654321</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="team-item-img">
+                        <img
+                            src="https://images.pexels.com/photos/18685804/pexels-photo-18685804/free-photo-of-may-nh-nhan-hi-u-t-ng-t-l-i-th-i.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt=""
+                        />
+                    </div>
+                    <div class="team-item-content">
+                        <h2 class="team-name">Lê Thúy An</h2>
+                        <p>0987654321</p>
+                        <p></p>
+                    </div>
                 </div>
             </div>
         </main>
-
         <!-- FOOTER -->
         <footer class="footer">
             <div class="container">
@@ -191,20 +230,6 @@
             </div>
         </footer>
         <!-- CLOSE FOOTER -->
-
-        <button id="scrollTopBtn" class="scroll-top-btn">
-            <i class="bx bx-chevron-up"></i>
-        </button>
-
-        <div id="loading">Loading...</div>
-
         <script src="./js/app.js?v=1.4"></script>
-        <script>
-            const loadingElement = document.getElementById("loading");
-            // Delay 2 giây trước khi ẩn phần loading
-            setTimeout(() => {
-                loadingElement.style.display = "none";
-            }, 1000); // Trễ 2 giây
-        </script>
     </body>
 </html>

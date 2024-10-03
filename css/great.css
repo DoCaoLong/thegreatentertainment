@@ -1,0 +1,35 @@
+.great-page {
+    margin-top: 84px;
+}
+.great-title {
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 34px;
+}
+.great-logos {
+    display: grid;
+    margin-top: 48px;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.great-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+.great-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0.8);
+}
+
+@media screen and (max-width: 767.98px) {
+    .great-title {
+        font-size: 36px;
+    }
+}

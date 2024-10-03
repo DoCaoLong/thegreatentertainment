@@ -1,0 +1,136 @@
+.production-page {
+    margin-top: 66px;
+}
+.production-container {
+    width: 970px;
+    margin: 0 auto;
+}
+.tab-container {
+    display: flex;
+    margin-top: 48px;
+    justify-content: space-between;
+}
+.tabs {
+    flex-direction: column;
+    width: 200px;
+    margin-right: 20px;
+}
+.tab-link {
+    background-color: unset;
+    outline: none;
+    border: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 166.667% */
+}
+.tab-link.active {
+    color: var(--primary--cl);
+}
+.tab-link:nth-child(1) {
+    margin-bottom: 20px;
+}
+.tab-content {
+    display: none;
+    width: 670px;
+}
+.tab-content.active {
+    display: block;
+}
+
+.accordion {
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    transition: background-color 0.2s ease;
+    color: #181d1f;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 145.455% */
+    text-transform: uppercase;
+    border: 0;
+    background-color: transparent;
+}
+.accodion-wrap:not(:first-child) {
+    margin-top: 30px;
+}
+
+.accordion:after {
+    content: "\002B"; /* Unicode character for plus sign */
+    font-size: 24px;
+    float: right;
+}
+.accordion.active:after {
+    content: "\2212"; /* Unicode character for minus sign */
+}
+.accordion-content {
+    display: none;
+    padding: 0 10px;
+    border-top: none;
+    overflow: hidden;
+}
+.accordion-content.show {
+    display: block;
+}
+.accordion-content p {
+    color: #5d6a6e;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+    padding: 16px 0 30px 0;
+    border-bottom: 1px solid #dbe1e3;
+}
+.production-title {
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 34px;
+}
+
+@media screen and (max-width: 1023.98px) {
+    .tabs {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        flex-direction: row;
+        margin-right: 0;
+        width: 100%;
+        justify-content: center;
+    }
+    .tab-container {
+        flex-direction: column;
+        margin-right: 0;
+        margin-top: 24px;
+    }
+    .tab-link:nth-child(1) {
+        margin: 0;
+    }
+    .tab-content {
+        width: 100%;
+        margin-top: 24px;
+    }
+    .production-container {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+@media screen and (max-width: 767.98px) {
+    .production-title {
+        font-size: 36px;
+    }
+    .accordion-content p {
+        padding: 6px 0;
+        font-size: 14px;
+    }
+    .accodion-wrap:not(:first-child) {
+        margin-top: 24px;
+    }
+    .accordion {
+        font-size: 16px;
+    }
+}

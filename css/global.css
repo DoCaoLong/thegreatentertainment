@@ -163,6 +163,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 2;
 }
 .header {
     display: flex;
@@ -274,7 +275,7 @@ header {
 .footer__wrap {
     display: flex;
     justify-content: space-around;
-    padding: var(--100px) 0;
+    padding: 100px 0 24px 0;
     color: black;
 }
 
@@ -317,17 +318,22 @@ header {
 .footer .contact i {
     font-size: var(--24px);
 }
+.footer-section a,
 .footer-section p {
     margin: 0.5rem 0; /* 8px */
     color: var(--black-cl);
     font-size: var(--16px);
     font-weight: 500;
     line-height: 1.3em;
+    text-decoration: none;
 }
 .contact__item {
     display: flex;
-    align-items: center;
-    gap: var(--14px);
+    align-items: flex-start;
+    gap: var(--4px);
+}
+.contact__item i {
+    transform: translateY(6px);
 }
 .register-button {
     background-color: #ff6347;
@@ -370,10 +376,13 @@ header {
     .footer .logo {
         margin: 0 auto;
     }
+    .contact__item {
+        justify-content: center;
+    }
 }
 @media screen and (max-width: 767.98px) {
     .footer__wrap {
-        padding: var(--24px) 0;
+        padding: var(--48px) 0;
     }
 }
 
