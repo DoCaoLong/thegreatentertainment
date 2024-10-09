@@ -6,30 +6,37 @@
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-
+    
     <url>
-        <loc>https://thegreatentertainment.com/about</loc>
+        <loc>https://thegreatentertainment.com/profile.html</loc>
         <lastmod>2024-10-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
-        <loc>https://thegreatentertainment.com/artist</loc>
+        <loc>https://thegreatentertainment.com/about.html</loc>
         <lastmod>2024-10-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
-        <loc>https://thegreatentertainment.com/great</loc>
+        <loc>https://thegreatentertainment.com/artist.html</loc>
         <lastmod>2024-10-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
-        <loc>https://thegreatentertainment.com/production</loc>
+        <loc>https://thegreatentertainment.com/great.html</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://thegreatentertainment.com/production.html</loc>
         <lastmod>2024-10-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
