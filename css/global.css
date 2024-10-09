@@ -73,6 +73,9 @@ body {
     line-height: 1;
     font-family: var(--font-intel);
 }
+main{
+    margin-bottom: var(--48px);
+}
 
 .container {
     width: 100%;
@@ -274,7 +277,7 @@ header {
 .footer__wrap {
     display: flex;
     justify-content: space-around;
-    padding: 100px 0 24px 0;
+    padding: var(--34px) 0;
     color: black;
 }
 
@@ -381,7 +384,10 @@ header {
 }
 @media screen and (max-width: 767.98px) {
     .footer__wrap {
-        padding: var(--48px) 0 var(--24px) 0;
+        padding: 0 0 var(--24px) 0;
+    }
+    main{
+        margin-bottom: 24px;
     }
 }
 
