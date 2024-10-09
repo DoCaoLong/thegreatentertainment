@@ -121,7 +121,9 @@
 }
 @media screen and (max-width: 767.98px) {
     .production-title {
-        font-size: 36px;
+        font-size: 30px;
+        line-height: 1.3;
+        padding: 0;
     }
     .accordion-content p {
         padding: 6px 0;

@@ -11,4 +11,4 @@ Disallow: /private/
 Allow: /
 
 # Khai báo sitemap để các bot tìm thấy dễ dàng
-Sitemap: https://www.thegreatentertainment.com/sitemap.xml
+Sitemap: https://thegreatentertainment.com/sitemap.xml

@@ -1,5 +1,5 @@
 .great-page {
-    margin-top: 84px;
+    margin-top: 66px;
 }
 .great-title {
     font-size: 3.8rem;
@@ -30,6 +30,18 @@
 
 @media screen and (max-width: 767.98px) {
     .great-title {
-        font-size: 36px;
+        font-size: 30px;
+        line-height: 1.3;
+        padding-top: 0;
+    }
+    .great-logos{
+        margin-top: 24px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .great-logo{
+        height: 100px;
+    }
+    .great-logo img{
+        transform: scale(1);
     }
 }

@@ -43,4 +43,26 @@ addEventListener("load", (event) => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
     // back to top
+
+});
+
+// avtive menu 
+document.addEventListener("DOMContentLoaded", function() {
+    // Lấy tất cả các link trong nav
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    // Lấy đường dẫn hiện tại
+    const currentPath = window.location.pathname;
+
+    // Duyệt qua tất cả các link và kiểm tra nếu trùng với đường dẫn hiện tại
+    navLinks.forEach(link => {
+        console.log(link.getAttribute('href'))
+        if (link.getAttribute('href') === currentPath) {
+            // Xóa lớp 'active' nếu có
+            navLinks.forEach(link => link.classList.remove('active-menu'));
+            
+            // Thêm lớp 'active' vào link tương ứng
+            link.classList.add('active-menu');
+        }
+    });
 });
