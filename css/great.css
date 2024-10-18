@@ -1,8 +1,8 @@
-body#body-great-page{
-    background-color: var(--secondary--cl);
-}
+
 .great-page {
     margin-top: 66px;
+    background-color: var(--secondary--cl);
+    padding-bottom: 66px;
 }
 .great-title {
     font-size: 3.8rem;
@@ -41,6 +41,9 @@ body#body-great-page{
 
 
 @media screen and (max-width: 767.98px) {
+    .great-page {
+        padding-bottom: 24px;
+    }
     .great-title {
         font-size: 30px;
         line-height: 1.3;
