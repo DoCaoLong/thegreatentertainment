@@ -73,7 +73,7 @@
         <!-- CSS Links -->
         <link rel="stylesheet" href="./css/global.css?v=2.1" />
         <link rel="stylesheet" href="./css/style.css?v=2.0" />
-        <link rel="stylesheet" href="./css/great.css" />
+        <link rel="stylesheet" href="./css/great.css?v=1.1" />
 
         <link
             href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -94,7 +94,7 @@
             gtag("config", "G-27X2KP73M8");
         </script>
     </head>
-    <body>
+    <body id="body-great-page">
         <header id="header">
             <div class="container">
                 <div class="header">
@@ -118,36 +118,13 @@
             </div>
         </header>
         <main class="great-page container">
-            <h1 class="great-title">our present and past clients</h1>
-            <div class="great-logos">
-                <div class="great-logo">
-                    <img src="./imgs/logo/mixus.png" alt="" />
-                </div>
-
-                <div class="great-logo">
-                    <img src="./imgs/logo/rubiz.png" alt="" />
-                </div>
-                <div class="great-logo">
-                    <img src="./imgs/logo/mixus.png" alt="" />
-                </div>
-
-                <div class="great-logo">
-                    <img src="./imgs/logo/rubiz.png" alt="" />
-                </div>
-                <div class="great-logo">
-                    <img src="./imgs/logo/mixus.png" alt="" />
-                </div>
-
-                <div class="great-logo">
-                    <img src="./imgs/logo/rubiz.png" alt="" />
-                </div>
-                <div class="great-logo">
-                    <img src="./imgs/logo/mixus.png" alt="" />
-                </div>
-
-                <div class="great-logo">
-                    <img src="./imgs/logo/rubiz.png" alt="" />
-                </div>
+            <div class="great-client">
+                <h2 class="great-title">Khách hàng</h2>
+                <div class="great-logos" id="logo-client"></div>
+            </div>
+            <div class="great-partner">
+                <h2 class="great-title">Doanh nghiệp</h2>
+                <div class="great-logos" id="logo-partner"></div>
             </div>
         </main>
         <!-- FOOTER -->
@@ -209,5 +186,34 @@
         </footer>
         <!-- CLOSE FOOTER -->
         <script src="./js/app.js?v=1.6"></script>
+        <script>
+            // Dữ liệu logo
+            const logosClient = Array.from({ length: 46 }, (_, i) => `./imgs/logo/logo-client/${i + 1}.png`);
+            const logosPartner = Array.from({ length: 23 }, (_, i) => `./imgs/logo/logo-partner/${i + 1}.png`);
+
+            // Sử dụng map() để tạo các phần tử HTML cho các logo
+            const clientHTML = logosClient
+                .map(
+                    (src) => `
+                    <div class="great-logo">
+                        <img src="${src}" alt="Client Logo" />
+                    </div>
+                    `
+                )
+                .join("");
+            const partnerHTML = logosPartner
+                .map(
+                    (src) => `
+                    <div class="great-logo">
+                        <img src="${src}" alt="Partner Logo" />
+                    </div>
+                    `
+                )
+                .join("");
+
+            // Chèn HTML vào DOM
+            document.getElementById("logo-client").innerHTML = clientHTML;
+            document.getElementById("logo-partner").innerHTML = partnerHTML;
+        </script>
     </body>
 </html>

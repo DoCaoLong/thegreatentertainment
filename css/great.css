@@ -1,3 +1,6 @@
+body#body-great-page{
+    background-color: var(--secondary--cl);
+}
 .great-page {
     margin-top: 66px;
 }
@@ -12,8 +15,8 @@
 .great-logos {
     display: grid;
     margin-top: 48px;
-    gap: 14px;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 .great-logo {
     display: flex;
@@ -24,9 +27,18 @@
 .great-logo img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transform: scale(0.8);
+    object-fit: contain;
 }
+
+@media screen and (max-width: 1023.98px) {
+    .great-partner{
+        margin-top: 48px;
+    }
+    .great-client{
+        padding-top: 24px;
+    }
+}
+
 
 @media screen and (max-width: 767.98px) {
     .great-title {
