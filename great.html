@@ -187,29 +187,72 @@
         <!-- CLOSE FOOTER -->
         <script src="./js/app.js?v=1.6"></script>
         <script>
-            // Dữ liệu logo
-            const logosClient = Array.from({ length: 46 }, (_, i) => `./imgs/logo/logo-client/${i + 1}.png`);
-            const logosPartner = Array.from({ length: 23 }, (_, i) => `./imgs/logo/logo-partner/${i + 1}.png`);
+            // Mảng số cụ thể cho các logo client và partner
+            const logosClientNumbers = Array.from(
+                { length: 46 },
+                (_, i) => i + 1
+            );
+            const logosPartnerNumbers = Array.from(
+                { length: 23 },
+                (_, i) => i + 1
+            );
+
+            // Giả định rằng một số ảnh có định dạng PNG (chữ hoa)
+            const PNGFilesClient = [
+                7,
+                8,
+                10,
+                11,
+                12,
+                14,
+                15,
+                17,
+                20,
+                21,
+                22,
+            ]; // Các số ảnh client có đuôi .PNG
+            const PNGFilesPartner = [
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 17, 18, 20, 21, 22,
+            ]; // Các số ảnh partner có đuôi .PNG
+
+            // Tạo hàm để xử lý định dạng logo
+            const createLogoPath = (numbersArray, PNGFilesArray, basePath) => {
+                return numbersArray.map((num) => {
+                    const extension = PNGFilesArray.includes(num)
+                        ? "PNG"
+                        : "png";
+                    return `${basePath}${num}.${extension}`;
+                });
+            };
+
+            // Tạo đường dẫn ảnh cho client và partner
+            const logosClient = createLogoPath(
+                logosClientNumbers,
+                PNGFilesClient,
+                "./imgs/logo/logo-client/"
+            );
+            const logosPartner = createLogoPath(
+                logosPartnerNumbers,
+                PNGFilesPartner,
+                "./imgs/logo/logo-partner/"
+            );
 
             // Sử dụng map() để tạo các phần tử HTML cho các logo
-            const clientHTML = logosClient
-                .map(
-                    (src) => `
+            const createHTML = (logosArray, altText) => {
+                return logosArray
+                    .map(
+                        (src) => `
                     <div class="great-logo">
-                        <img src="${src}" alt="Client Logo" />
+                        <img src="${src}" alt="${altText}" />
                     </div>
-                    `
-                )
-                .join("");
-            const partnerHTML = logosPartner
-                .map(
-                    (src) => `
-                    <div class="great-logo">
-                        <img src="${src}" alt="Partner Logo" />
-                    </div>
-                    `
-                )
-                .join("");
+                `
+                    )
+                    .join("");
+            };
+
+            // Tạo HTML cho client và partner
+            const clientHTML = createHTML(logosClient, "Client Logo");
+            const partnerHTML = createHTML(logosPartner, "Partner Logo");
 
             // Chèn HTML vào DOM
             document.getElementById("logo-client").innerHTML = clientHTML;
