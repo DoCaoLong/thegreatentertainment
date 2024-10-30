@@ -71,7 +71,7 @@
         <link rel="manifest" href="./imgs/favicon/site.webmanifest" />
 
         <!-- CSS Links -->
-        <link rel="stylesheet" href="./css/global.css?v=2.1" />
+        <link rel="stylesheet" href="./css/global.css?v=2.2" />
         <link rel="stylesheet" href="./css/style.css?v=2.0" />
         <link rel="stylesheet" href="./css/great.css?v=1.2" />
 
@@ -118,13 +118,17 @@
             </div>
         </header>
         <main class="great-page">
+            <div class="great-partner-music container">
+                <h2 class="great-title">Đối tác nhạc số</h2>
+                <div class="great-logos" id="logo-partner-music"></div>
+            </div>
+            <div class="great-gameshow container">
+                <h2 class="great-title">Gameshow - Truyền hình thực tế</h2>
+                <div class="great-logos" id="logo-gameshow"></div>
+            </div>
             <div class="great-client container">
                 <h2 class="great-title">Khách hàng</h2>
                 <div class="great-logos" id="logo-client"></div>
-            </div>
-            <div class="great-partner container">
-                <h2 class="great-title">Doanh nghiệp</h2>
-                <div class="great-logos" id="logo-partner"></div>
             </div>
         </main>
         <!-- FOOTER -->
@@ -140,17 +144,45 @@
                     <div class="footer-section links">
                         <h3>Links</h3>
                         <ul>
-                            <li><a href="#">Term Of Use</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li class="contact__item">
+                                <i
+                                    style="font-size: 24px"
+                                    class="bx bxl-facebook-circle"
+                                ></i
+                                ><a
+                                    target="_blank"
+                                    href="https://www.facebook.com/@GreatEntertainmentOfficial"
+                                    >Facebook</a
+                                >
+                            </li>
+                            <li class="contact__item">
+                                <i
+                                    style="font-size: 24px"
+                                    class="bx bxl-youtube"
+                                ></i
+                                ><a
+                                    target="_blank"
+                                    href="https://www.youtube.com/@greatentertainment9265?si=5_ORWg1YOsaNmMbc"
+                                    >Youtube</a
+                                >
+                            </li>
                         </ul>
                     </div>
                     <div class="footer-section page">
                         <h3>Page</h3>
                         <ul>
-                            <li><a href="/artist.html">Artist</a></li>
-                            <li><a href="/production.html">Production</a></li>
-                            <li><a href="/great.html">Great's Network</a></li>
-                            <li><a href="/about.html">About Us</a></li>
+                            <li class="contact__item">
+                                <a href="/artist.html">Artist</a>
+                            </li>
+                            <li class="contact__item">
+                                <a href="/production.html">Production</a>
+                            </li>
+                            <li class="contact__item">
+                                <a href="/great.html">Great's Network</a>
+                            </li>
+                            <li class="contact__item">
+                                <a href="/about.html">About Us</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="footer-section contact">
@@ -185,56 +217,46 @@
             </div>
         </footer>
         <!-- CLOSE FOOTER -->
-        <script src="./js/app.js?v=1.6"></script>
+        <script src="./js/app.js?v=1.7"></script>
         <script>
-            // Mảng số cụ thể cho các logo client và partner
-            const logosClientNumbers = Array.from(
-                { length: 46 },
-                (_, i) => i + 1
-            );
-            const logosPartnerNumbers = Array.from(
-                { length: 23 },
-                (_, i) => i + 1
-            );
+            const partnerMusic = Array.from({ length: 19 }, (_, i) => i + 1);
+            const gameShow = Array.from({ length: 8 }, (_, i) => i + 1);
+            const client = Array.from({ length: 23 }, (_, i) => i + 1);
 
             // Giả định rằng một số ảnh có định dạng PNG (chữ hoa)
-            const PNGFilesClient = [
-                7,
-                8,
-                10,
-                11,
-                12,
-                14,
-                15,
-                17,
-                20,
-                21,
-                22,
-            ]; // Các số ảnh client có đuôi .PNG
-            const PNGFilesPartner = [
-                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 17, 18, 20, 21, 22,
-            ]; // Các số ảnh partner có đuôi .PNG
+            const PNGFilesPartnerMusic = [
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+            ];
+            const PNGFilesGameshow = [1, 2, 4, 5, 6, 7];
+            const PNGFilesClient = [3, 8, 9, 13, 14, 16, 17, 19, 22, 23];
 
             // Tạo hàm để xử lý định dạng logo
             const createLogoPath = (numbersArray, PNGFilesArray, basePath) => {
-                return numbersArray.map((num) => {
-                    const extension = PNGFilesArray.includes(num)
+                return numbersArray.map((item) => {
+                    const extension = PNGFilesArray.includes(item)
                         ? "PNG"
                         : "png";
-                    return `${basePath}${num}.${extension}`;
+                    return `${basePath}${item}.${extension}`;
                 });
             };
 
-            // Tạo đường dẫn ảnh cho client và partner
+            // Tạo đường dẫn ảnh
+            const logosPartnerMusic = createLogoPath(
+                partnerMusic,
+                PNGFilesPartnerMusic,
+                "./imgs/logo/logo-partner-music/"
+            );
+
+            const logosGameshow = createLogoPath(
+                gameShow,
+                PNGFilesGameshow,
+                "./imgs/logo/logo-gameshow/"
+            );
+
             const logosClient = createLogoPath(
-                logosClientNumbers,
+                client,
                 PNGFilesClient,
                 "./imgs/logo/logo-client/"
-            );
-            const logosPartner = createLogoPath(
-                logosPartnerNumbers,
-                PNGFilesPartner,
-                "./imgs/logo/logo-partner/"
             );
 
             // Sử dụng map() để tạo các phần tử HTML cho các logo
@@ -250,13 +272,19 @@
                     .join("");
             };
 
-            // Tạo HTML cho client và partner
-            const clientHTML = createHTML(logosClient, "Client Logo");
-            const partnerHTML = createHTML(logosPartner, "Partner Logo");
+            // Tạo HTML
+            const partnerMusicHTML = createHTML(
+                logosPartnerMusic,
+                "Partner Music Logo"
+            );
+            const gameShowHTML = createHTML(logosGameshow, "Game Show Logo");
+            const clientHTML = createHTML(logosClient, "Partner Logo");
 
             // Chèn HTML vào DOM
+            document.getElementById("logo-partner-music").innerHTML =
+                partnerMusicHTML;
+            document.getElementById("logo-gameshow").innerHTML = gameShowHTML;
             document.getElementById("logo-client").innerHTML = clientHTML;
-            document.getElementById("logo-partner").innerHTML = partnerHTML;
         </script>
     </body>
 </html>

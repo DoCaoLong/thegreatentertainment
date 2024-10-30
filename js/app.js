@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const currentPath = window.location.pathname;
 
     navLinks.forEach(link => {
-        console.log(link.getAttribute('href'));
         if (link.getAttribute('href') === currentPath) {
             navLinks.forEach(link => link.classList.remove('active-menu'));
             link.classList.add('active-menu');

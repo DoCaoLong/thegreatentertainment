@@ -31,10 +31,10 @@
 }
 
 @media screen and (max-width: 1023.98px) {
-    .great-partner{
+    .great-gameshow, .great-client{
         margin-top: 48px;
     }
-    .great-client{
+    .great-partner-music {
         padding-top: 24px;
     }
 }
