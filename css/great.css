@@ -16,7 +16,7 @@
 .great-logos {
     display: grid;
     margin-top: 48px;
-    gap: 24px;
+    gap: 14px;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 .great-logo {
