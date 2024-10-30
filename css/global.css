@@ -73,8 +73,12 @@ body {
     line-height: 1;
     font-family: var(--font-intel);
 }
-main{
+main {
     margin-bottom: var(--48px);
+}
+
+a {
+    color: var(--black-cl);
 }
 
 .container {
@@ -382,7 +386,7 @@ header {
     .footer__wrap {
         padding: 0 0 var(--24px) 0;
     }
-    main{
+    main {
         margin-bottom: 24px;
     }
 }
@@ -406,6 +410,6 @@ header {
     color: #000;
     z-index: 1000;
 }
-.active-menu{
+.active-menu {
     color: var(--primary--cl) !important;
 }
