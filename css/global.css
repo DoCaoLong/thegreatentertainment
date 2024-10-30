@@ -77,7 +77,7 @@ main {
     margin-bottom: var(--48px);
 }
 
-a {
+a,button {
     color: var(--black-cl);
 }
 
