@@ -326,129 +326,7 @@
                 <div class="container">
                     <h5>Our Gallery</h5>
                     <h2>Impressive Photos Documented</h2>
-                    <div class="gallery-grid">
-                        <a
-                            target="_blank"
-                            href="/profile.html?name=bray"
-                            class="gallery-item"
-                        >
-                            <img src="./imgs/profile/bray.jpeg" alt="" />
-                        </a>
-                        <a
-                            target="_blank"
-                            href="/profile.html?name=masew"
-                            class="gallery-item"
-                        >
-                            <img src="./imgs/profile/masew.png" alt="" />
-                        </a>
-                        <a
-                            target="_blank"
-                            href="/profile.html?name=quanap"
-                            class="gallery-item"
-                        >
-                            <img src="./imgs/profile/quanap.jpg" alt="" />
-                        </a>
-                        <a
-                            target="_blank"
-                            href="/profile.html?name=lienbinhphat"
-                            class="gallery-item"
-                        >
-                            <img src="./imgs/profile/lienbinhphat.jpg" alt="" />
-                        </a>
-                        <a
-                            target="_blank"
-                            href="/profile.html?name=nekole"
-                            class="gallery-item"
-                        >
-                            <img src="./imgs/profile/nekole.jpg" alt="" />
-                        </a>
-                        <a
-                            target="_blank"
-                            href="/profile.html?name=youngh"
-                            class="gallery-item"
-                        >
-                            <img src="./imgs/profile/young-h.png" alt="" />
-                        </a>
-                        <a
-                            target="_blank"
-                            href="/profile.html?name=kicm"
-                            class="gallery-item"
-                        >
-                            <img src="./imgs/profile/kicm.png" alt="" />
-                        </a>
-                        <a
-                            target="_blank"
-                            href="/profile.html?name=doanhieu"
-                            class="gallery-item"
-                        >
-                            <img src="./imgs/profile/doanhieu.jpg" alt="" />
-                        </a>
-                        <a
-                            target="_blank"
-                            href="/profile.html?name=mrb"
-                            class="gallery-item"
-                        >
-                            <img src="./imgs/profile/mrb.jpg" alt="" />
-                        </a>
-                        <a
-                            target="_blank"
-                            href="/profile.html?name=captain"
-                            class="gallery-item"
-                        >
-                            <img src="./imgs/profile/captain.jpg" alt="" />
-                        </a>
-                        <a
-                            target="_blank"
-                            href="/profile.html?name=phamvietthang"
-                            class="gallery-item"
-                        >
-                            <img
-                                src="./imgs/profile/phamvietthang.jpg"
-                                alt=""
-                            />
-                        </a>
-                        <a
-                            target="_blank"
-                            href="/profile.html?name=khoivu"
-                            class="gallery-item"
-                        >
-                            <img src="./imgs/profile/khoi-vu.png" alt="" />
-                        </a>
-                        <a
-                            target="_blank"
-                            href="/profile.html?name=lamthanhnha"
-                            class="gallery-item"
-                        >
-                            <img
-                                src="./imgs/profile/lam-thanh-nha.png"
-                                alt=""
-                            />
-                        </a>
-                        <a
-                            target="_blank"
-                            href="/profile.html?name=letrunghieu"
-                            class="gallery-item"
-                        >
-                            <img src="./imgs/profile/letrunghieu.jpg" alt="" />
-                        </a>
-                        <a
-                            target="_blank"
-                            href="/profile.html?name=nguyenjenda"
-                            class="gallery-item"
-                        >
-                            <img src="./imgs/profile/nguyenjenda.jpg" alt="" />
-                        </a>
-                        <a
-                            target="_blank"
-                            href="/profile.html?name=nguyenhaiduong"
-                            class="gallery-item"
-                        >
-                            <img
-                                src="./imgs/profile/nguyen-hai-duong.png"
-                                alt=""
-                            />
-                        </a>
-                    </div>
+                    <div id="gallery-grid" class="gallery-grid"></div>
                 </div>
             </section>
 
@@ -677,6 +555,57 @@
                     loadingElement.style.display = "none"; // Ẩn loading khi tất cả ảnh đã tải xong
                 }
             }
+
+            const profiles = [
+                { name: "bray", imgSrc: "./imgs/profile/bray.png" },
+                { name: "baoyen", imgSrc: "./imgs/profile/bao-yen.png" },
+                { name: "doanhieu", imgSrc: "./imgs/profile/doan-hieu.png" },
+                { name: "kicm", imgSrc: "./imgs/profile/kicm.png" },
+                { name: "khoivu", imgSrc: "./imgs/profile/khoi-vu.png" },
+                {
+                    name: "lamthanhnha",
+                    imgSrc: "./imgs/profile/lam-thanh-nha.png",
+                },
+                {
+                    name: "letrunghieu",
+                    imgSrc: "./imgs/profile/letrunghieu.png",
+                },
+                {
+                    name: "lienbinhphat",
+                    imgSrc: "./imgs/profile/lienbinhphat.png",
+                },
+                { name: "masew", imgSrc: "./imgs/profile/masew.png" },
+                { name: "mrb", imgSrc: "./imgs/profile/mrb.png" },
+                { name: "nekole", imgSrc: "./imgs/profile/nekole.png" },
+                { name: "ngockayla", imgSrc: "./imgs/profile/ngockayla.png" },
+                {
+                    name: "nguyenhaiduong",
+                    imgSrc: "./imgs/profile/nguyen-hai-duong.png",
+                },
+                {
+                    name: "nguyenjenda",
+                    imgSrc: "./imgs/profile/nguyenjenda.png",
+                },
+                {
+                    name: "phamvietthang",
+                    imgSrc: "./imgs/profile/phamvietthang.png",
+                },
+                { name: "quanap", imgSrc: "./imgs/profile/quanap.png" },
+                { name: "youngh", imgSrc: "./imgs/profile/young-h.png" },
+            ];
+
+            const galleryGrid = document.getElementById("gallery-grid");
+
+            galleryGrid.innerHTML = profiles
+                .map(
+                    (profile) =>
+                        `
+                        <a target="_blank" href="/profile.html?name=${profile.name}" class="gallery-item">
+                        <img src="${profile.imgSrc}" alt="${profile.name}" />
+                        </a>
+                    `
+                )
+                .join(""); // Dùng .join("") để nối tất cả các template string thành một chuỗi duy nhất.
         </script>
     </body>
 </html>
